@@ -67,9 +67,211 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
+html {
+  font-size: 1.2em;
+  color: #000;
+}
+
+/* line 14, ../sass/screen.scss */
+body {
+  background: #eee;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, ../../../Programs/compass.app.windows.1.29/compass.app/lib/ruby/compass_extensions/susy-2.1.3/sass/susy/output/support/_clearfix.scss */
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/* line 21, ../sass/screen.scss */
 #demo {
-  color: red;
+  color: #7d4627;
   font-size: 2.5em;
   text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
 }
+
+/* line 29, ../sass/screen.scss */
+#pro1, #pro2, #pro3 {
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  color: green;
+}
+
+/* line 40, ../sass/screen.scss */
+section p, aside ul {
+  margin: 2px 0px;
+  padding: 10px;
+  border-top: solid 1px #ddd;
+  border-bottom: solid 1px #aaa;
+  border-left: solid 1px #ddd;
+  border-right: solid 1px #aaa;
+  line-height: 2em;
+}
+
+/* line 52, ../sass/screen.scss */
+section {
+  margin-bottom: 100px;
+}
+
+/* line 58, ../sass/screen.scss */
+.col1, .col2, .col3 {
+  margin: 20px auto;
+  font-size: 0.9em;
+}
+/* line 62, ../sass/screen.scss */
+.col1 h3, .col2 h3, .col3 h3 {
+  color: #7d4627;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+/* line 71, ../sass/screen.scss */
+.col1 h4, .col2 h4, .col3 h4 {
+  color: #666;
+  font-size: 1em;
+  font-weight: bold;
+}
+/* line 77, ../sass/screen.scss */
+.col1 span, .col2 span, .col3 span {
+  display: block;
+  text-align: center;
+}
+
+/* line 85, ../sass/screen.scss */
+aside ul {
+  border: none;
+}
+
+/* line 87, ../sass/screen.scss */
+aside ul li {
+  line-height: 2em;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* line 95, ../sass/screen.scss */
+#container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.8333333333%;
+  padding-right: 0.8333333333%;
+}
+
+/* line 102, ../sass/screen.scss */
+#leftContent {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.8333333333%;
+  padding-right: 0.8333333333%;
+}
+
+/*
+*This is for the right panel
+aside {
+
+	@include span(4 at 9 );	
+}
+
+*/
+/*   Small Breakpoint   */
+@media (min-width: 300px) {
+  /* line 118, ../sass/screen.scss */
+  #leftContent {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.8333333333%;
+    padding-right: 0.8333333333%;
+  }
+}
+
+@media (min-width: 300px) {
+  /* line 124, ../sass/screen.scss */
+  aside {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.8333333333%;
+    padding-right: 0.8333333333%;
+  }
+}
+
+/*   large Breakpoint   */
+@media (min-width: 800px) {
+  /* line 134, ../sass/screen.scss */
+  #leftContent {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.6666666667%;
+    padding-right: 1.6666666667%;
+  }
+}
+
+@media (min-width: 800px) {
+  /* line 140, ../sass/screen.scss */
+  aside {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 1.6666666667%;
+    padding-right: 1.6666666667%;
+  }
+}
+
+/*   XLarge Breakpoint   */
+@media (min-width: 1200px) {
+  /* line 153, ../sass/screen.scss */
+  #leftContent {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.8333333333%;
+    padding-right: 0.8333333333%;
+  }
+  /* line 156, ../sass/screen.scss */
+  #leftContent .col1, #leftContent .col2, #leftContent .col3 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 0.8333333333%;
+    padding-right: 0.8333333333%;
+  }
+}
+
+/*   
+* This is for the right panel   
+aside {
+    @include susy-breakpoint($Xlarge, 24){
+	@include span(3 at 21);
+	@include bleed(20px);	
+       }
+}
+
+*/

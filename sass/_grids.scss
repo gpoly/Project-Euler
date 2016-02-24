@@ -2,8 +2,24 @@
 // ============
 
 @import "susy";
+@import "breakpoint";
 
 $susy: (
   columns: 12,
   gutters: 1/4,
+  gutter-position: inside,
 );
+
+$layout: (
+  columns: 24,
+  gutters: 1/4,
+  gutter-position: inside,
+);
+
+$Xlarge:1200px;
+$large:800px;
+$Xsmall:300px;
+
+$DarkBrown:  #7d4627;
+
+

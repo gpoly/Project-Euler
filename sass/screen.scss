@@ -4,9 +4,168 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "grids";
+
+
+html{font-size: 1.2em;
+	color: #000;
+    }
+
+body{
+	background: #eee;
+	@include container(80%);
+  
+	
+}
 
 #demo{
-	color: red;
+	color: $DarkBrown;
 	font-size: 2.5em;
 	text-align: center;
+	margin-top: 10px;
+	font-weight: bold;
 }
+
+#pro1, #pro2, #pro3{
+ height:40px;
+ padding:10px;
+ text-align: center;
+ font-size: 1.5em;
+ color: green;
+
+
+}
+
+
+section p , aside ul{
+
+	margin: 2px 0px;
+	padding: 10px;
+	border-top: solid 1px #ddd;
+    border-bottom: solid 1px #aaa;
+    border-left: solid 1px #ddd;
+    border-right: solid 1px #aaa;
+	line-height: 2em;
+	
+}
+
+section{
+
+  margin-bottom: 100px;
+}
+
+
+.col1 , .col2 , .col3 { 
+  margin: 20px auto;
+  font-size: 0.9em;
+
+	h3{
+color: $DarkBrown;
+font-size: 1.5em;
+font-weight: bold;
+line-height: 1.5em;
+
+  }
+
+
+   h4{
+color: #666;
+font-size: 1em;
+font-weight: bold;
+  }
+
+span{
+  display: block;
+  text-align: center;
+    }
+}
+
+
+
+aside ul{border:none;}
+
+aside ul li{
+
+	
+	line-height: 2em;
+	font-size: 18px;
+	border-bottom: 1px solid #ccc
+}
+
+#container {
+
+	@include span(12);
+	
+
+	}
+
+#leftContent{
+@include span(12);
+
+}
+/*
+*This is for the right panel
+aside {
+
+	@include span(4 at 9 );	
+}
+
+*/
+
+
+/*   Small Breakpoint   */
+ 
+  #leftContent{
+  	@include susy-breakpoint($Xsmall,12){
+    @include span(12);
+                        }
+}
+
+aside {
+     @include susy-breakpoint($Xsmall,12){
+	 @include span(12);	
+                         }
+       }
+
+
+
+/*   large Breakpoint   */
+
+  #leftContent{
+  	@include susy-breakpoint($large,6){
+    @include span(6);
+                     }
+}       
+
+aside {
+    @include susy-breakpoint($large,6){
+	@include span(6);	
+     }
+}
+
+
+
+
+/*   XLarge Breakpoint   */
+
+
+
+   #leftContent{
+   	@include susy-breakpoint($Xlarge, 12){
+    @include span(12);
+      .col1, .col2, .col3 {
+       @include span(12);
+      }
+   }
+}
+
+/*   
+* This is for the right panel   
+aside {
+    @include susy-breakpoint($Xlarge, 24){
+	@include span(3 at 21);
+	@include bleed(20px);	
+       }
+}
+
+*/
